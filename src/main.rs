@@ -17,7 +17,7 @@ async fn stats() -> &'static str {
 async fn main() {
     let app = Router::new()
         .route("/", get(index))
-        .route("/weather", get(weather_request))
+        .route("/api/weather", get(weather_request))
         .route("/stats", get(stats));
 
     let addr = SocketAddr::from(([127, 0, 0, 1], 3030));
