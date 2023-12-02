@@ -1,13 +1,11 @@
 mod domain;
+mod pages;
 mod request;
 
+use crate::pages::index;
 use crate::request::weather_request;
 use axum::{routing::get, Router};
 use std::net::SocketAddr;
-
-async fn index() -> &'static str {
-    "Index"
-}
 
 async fn stats() -> &'static str {
     "Stats"
